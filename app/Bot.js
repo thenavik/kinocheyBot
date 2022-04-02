@@ -1,3 +1,4 @@
+const { text } = require('express')
 const TelegramBot = require('node-telegram-bot-api')
 const SearchHandler = require('./handlers/SearchHandler')
 const token = process.env.BOT_TOKEN
@@ -18,6 +19,10 @@ class Bot {
             await StartHandler.handle(msg, this.bot)
         })
         this.bot.on('message', async msg => {
+            const text = msg.text.trim()
+            if (text.indexOf('/') !== -1) {
+                return
+            }
             await SearchHandler.handle(msg, this.bot)
         })
     }
