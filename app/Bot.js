@@ -7,7 +7,9 @@ const url =  process.env.APP_URL
 class Bot {
     init (polling = false) {
         this.bot = new TelegramBot(token, { polling })
-        this.bot.setWebHook(`${url}/bot${token}`)
+        if (!polling) {
+            this.bot.setWebHook(`${url}/bot${token}`)
+        }
         return this.bot
     }
 
