@@ -13,9 +13,6 @@ class FindDB {
           return err;
         } else {
           JSON.stringify(kino);
-          if (!kino.length) {
-            return "По вашему запросу ничего не найдено.";
-          }
           return kino;
         }
       }
