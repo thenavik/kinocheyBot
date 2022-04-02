@@ -5,7 +5,9 @@ const Bot = require('./app/Bot')
 const token = process.env.BOT_TOKEN
 const PORT = process.env.PORT || 8200
 
-const bot = Bot.init()
+const polling = process.env.APP_MODE === 'local'
+
+const bot = Bot.init(polling)
 const app = express()
 app.use(express.json())
 
