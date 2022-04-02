@@ -20,7 +20,7 @@ class Bot {
         })
         this.bot.on('message', async msg => {
             const text = msg.text.trim()
-            if (text.indexOf('/') !== -1) {
+            if (text.indexOf('/') === 0) {
                 return
             }
             await SearchHandler.handle(msg, this.bot)
