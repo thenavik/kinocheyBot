@@ -16,7 +16,7 @@ class FindDB {
           return kino;
         }
       }
-    );
+    ).limit(10);
 
     return result;
   }
