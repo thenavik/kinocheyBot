@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
-const {token} = process.env.BOT_TOKEN
+const token = process.env.BOT_TOKEN
 const StartHandler = require('./handlers/StartHandler')
 const url =  process.env.APP_URL
 
