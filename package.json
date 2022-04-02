@@ -1,0 +1,16 @@
+{
+  "name": "kinocheyBot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thenavik/kinocheyBot.git",
+  "author": "gholib <gtrandnet@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "node-telegram-bot-api": "^0.56.0"
+  }
+}
