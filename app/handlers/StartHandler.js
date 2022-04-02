@@ -18,3 +18,5 @@ class StartHandler {
         return await bot.sendMessage(chatId, '', opts)
     }
 }
+
+module.exports = new StartHandler()
