@@ -15,7 +15,7 @@ class Bot {
         this.bot.onText(/\/start/, async msg => {
             await StartHandler.handle(msg, this.bot)
         })
-        this.on('message', async msg => {
+        this.bot.on('message', async msg => {
             await SearchHandler.handle(msg, this.bot)
         })
     }
