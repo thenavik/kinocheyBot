@@ -12,12 +12,8 @@ class Bot {
 
     launch () {
         this.bot.onText(/\/start/, async msg => {
-            console.log('dd', msg);
             await StartHandler.handle(msg, this.bot)
         })
-        this.bot.on('message', msg => {
-            this.bot.sendMessage(msg.chat.id, 'I am alive!');
-        });
     }
 }
 
