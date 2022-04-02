@@ -15,7 +15,7 @@ class StartHandler {
             }
         }
 
-        return await bot.sendMessage(chatId, '', opts)
+        return await bot.sendMessage(chatId, 'test', opts)
     }
 }
 

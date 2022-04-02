@@ -4,8 +4,8 @@ const StartHandler = require('./handlers/StartHandler')
 const url =  process.env.APP_URL
 
 class Bot {
-    init () {
-        this.bot = new TelegramBot(token)
+    init (polling = false) {
+        this.bot = new TelegramBot(token, { polling })
         this.bot.setWebHook(`${url}/bot${token}`)
         return this.bot
     }
@@ -15,6 +15,9 @@ class Bot {
             console.log('dd', msg);
             await StartHandler.handle(msg, this.bot)
         })
+        this.bot.on('message', msg => {
+            this.bot.sendMessage(msg.chat.id, 'I am alive!');
+        });
     }
 }
 
