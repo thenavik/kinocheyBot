@@ -1,4 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
+const SearchHandler = require('./handlers/SearchHandler')
 const token = process.env.BOT_TOKEN
 const StartHandler = require('./handlers/StartHandler')
 const url =  process.env.APP_URL
@@ -13,6 +14,9 @@ class Bot {
     launch () {
         this.bot.onText(/\/start/, async msg => {
             await StartHandler.handle(msg, this.bot)
+        })
+        this.on('message', async msg => {
+            await SearchHandler.handle(msg, this.bot)
         })
     }
 }
