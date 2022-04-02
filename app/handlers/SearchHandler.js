@@ -9,15 +9,15 @@ class SearchHandler {
                         {
                             text: 'Бэтмен 2024',
                             url: 'https://film.repost.space'
-                        },
+                        }
+                    ],
+                    [
                         {
                             text: 'Бэтмен 2024',
                             url: 'https://film.repost.space'
-                        },
-                        {
-                            text: 'Бэтмен 2024',
-                            url: 'https://film.repost.space'
-                        },
+                        }
+                    ],
+                    [
                         {
                             text: 'Бэтмен 2024',
                             url: 'https://film.repost.space'
